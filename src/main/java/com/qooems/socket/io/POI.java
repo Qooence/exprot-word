@@ -12,6 +12,12 @@ public class POI {
     public static void main(String[] args) {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("name", " ");
+        map.put("age", "45");
+        map.put("sex", "女");
+        map.put("sexName", ("女").equals((String)map.get("sex")) ? "女士" : "先生");
+        map.put("year", "3");
+        map.put("price", "100000.00");
+
         try {
             XWPFDocument doc = WordExportUtil.exportWord07(
                     "doc/test.docx", map);
